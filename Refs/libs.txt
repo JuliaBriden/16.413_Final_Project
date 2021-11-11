@@ -1,0 +1,1 @@
+Bernstein polynomial optimization library: https://github.com/caslabuiowa/BeBOT
