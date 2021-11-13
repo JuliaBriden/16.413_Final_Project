@@ -1,0 +1,30 @@
+# ## 1. Problem Formulation
+
+# Github code from paper: https://github.com/jasour/Risk-Bounded-Continuous-Time-Trajectory-Planning/blob/main/RRT_Tools/RRT_SOS_Static.m
+
+
+# Determine obstacles (dynamic or static, convex or nonconvex), start and goal points, probabilistic optimization problem formulation, constraints, planning time horizon
+
+# https://trs.jpl.nasa.gov/bitstream/handle/2014/47541/CL%2317-0518.pdf?sequence=1
+
+# Precision Landing Maneuver:
+# Upon receiving an initial surface-relative position and velocity estimate from the ILS, guidance
+# will perform the Precision Landing Maneuver (PLM). The objective of this maneuver is to steer
+# the PDV so that, at the end of the maneuver, the PDV is vertically-oriented directly above the
+# landing site at an altitude of 1000 m with zero horizontal velocity and vertical velocity of -30 m/s.
+# When the PLM is complete, the PDV will descend to an altitude of 500 m to begin Hazard
+# Detection and Avoidance.
+
+# Hazard Detection and Avoidance:
+# When the PDV is at an altitude of 500 m and directly above the targeted landing location, it uses
+# the 3D-imaging lidar to scan the landing site, construct a safe landing map, and select a landing 
+# Pre-decisional: for information and discussion only 13
+# location within that map. This activity must complete in three seconds, at which time the PDV will
+# be approximately 400 m above the targeted landing location.
+# Once the Hazard Detection activity has finished, guidance uses the new, safe landing location
+# to construct a guidance profile and steer the vehicle to a point above the targeted safe landing spot.
+# The Hazard Avoidance Maneuver begins at an altitude of 250 m and completes at an altitude of
+# 30 m with a vertical velocity of -0.5 m/s. The safe landing map, using the data from the 3D-imaging
+# lidar, will be 100 m  100 m and the vehicle has the capability to land anywhere within that map.
+
+# ![alt text](europalander.png "Europa Lander mission concept")
